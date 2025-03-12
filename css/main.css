@@ -24,6 +24,14 @@ main,
 section {
   background-color: #2B2B2B; }
 
+footer {
+  background-color: #3B3B3B; }
+
+.wrapper {
+  width: 70%;
+  max-width: 1440px;
+  margin: 0 auto; }
+
 h1,
 h2,
 h3,
@@ -38,6 +46,9 @@ h2 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   font-weight: 700; }
+
+p {
+  font-size: 1.6rem; }
 
 li {
   list-style: none; }
@@ -62,6 +73,30 @@ a {
   .filled-button img {
     vertical-align: middle; }
 
+.email-form {
+  display: flex;
+  align-items: center; }
+  .email-form input {
+    padding: 2rem 5rem 2rem 2rem; }
+
+input {
+  font-size: 1.6rem;
+  font-family: "Work Sans";
+  border-radius: 20px;
+  border: none; }
+
+button {
+  padding: 2rem 5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+  right: 3rem;
+  cursor: pointer; }
+  button.filled-button {
+    border: 0.5px solid #A259FF; }
+    button.filled-button:hover {
+      background-color: #A259FF; }
+
 header .header-wrapper {
   width: 80%;
   max-width: 1440px;
@@ -78,7 +113,40 @@ header .header-wrapper {
     header .header-wrapper nav ul li .filled-button {
       padding: 1.8rem 2.8rem; }
 
+footer {
+  padding: 4rem 0; }
+  footer .wrapper .footer-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    margin-bottom: 3rem; }
+    footer .wrapper .footer-info .footer-logo .logo {
+      margin-bottom: 3rem;
+      width: 25rem; }
+      footer .wrapper .footer-info .footer-logo .logo a {
+        margin-top: 0; }
+    footer .wrapper .footer-info .footer-nav {
+      margin: 0 4rem; }
+      footer .wrapper .footer-info .footer-nav h2 {
+        margin-bottom: 3rem; }
+      footer .wrapper .footer-info .footer-nav ul li {
+        margin: 2rem 0; }
+    footer .wrapper .footer-info .footer-contact h2 {
+      margin-bottom: 3rem; }
+  footer .wrapper p,
+  footer .wrapper a {
+    margin: 2rem 0;
+    color: #CCC;
+    font-weight: 400;
+    line-height: 140%; }
+  footer .wrapper .copy {
+    border-top: 1px solid #858584;
+    padding-top: 2rem; }
+
 @media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 90%; }
+
   header .header-wrapper {
     width: 90%; } }
 @media screen and (max-width: 992px) {
@@ -92,11 +160,26 @@ header .header-wrapper {
         border: transparent;
         padding: 1.2rem 2rem; }
         header .header-wrapper nav ul li .filled-button img {
-          display: none; } }
+          display: none; }
+
+  footer .wrapper .footer-info {
+    display: grid;
+    grid-template-columns: 1fr; }
+    footer .wrapper .footer-info .footer-nav {
+      margin-left: 0; } }
 @media screen and (max-width: 768px) {
   header .header-wrapper {
     width: 98%; } }
 @media screen and (max-width: 576px) {
+  .email-form {
+    flex-direction: column; }
+    .email-form input {
+      width: 100%;
+      margin-bottom: 1.6rem; }
+    .email-form button {
+      width: 100%;
+      right: 0; }
+
   header .header-wrapper nav ul {
     flex-direction: column; }
     header .header-wrapper nav ul li {
