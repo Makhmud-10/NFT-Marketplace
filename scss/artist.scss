@@ -17,6 +17,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: "Space Mono";
+  src: url('../fonts/Space_Mono/SpaceMono-Regular.ttf');
+  font-weight: 400;
+}
+
 // Global styles
 * {
   margin: 0;
@@ -161,6 +167,34 @@ button {
   }
 }
 
+.done-by {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 1.2rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
+}
+
+.line {
+  border-top: 1px solid #3b3b3b;
+  width: 100%;
+  position: relative;
+  bottom: 70px;
+}
+
+.footer-line {
+  border-top: 3px solid #2b2b2b;
+  top: 80px;
+}
+
 // Header section
 header {
   .header-wrapper {
@@ -211,7 +245,7 @@ main {
 
 // Artist info section
 .artist-info-section {
-  padding: 4rem 0 ;
+  padding-top: 4rem;
 
   .wrapper {
     padding-top: 50px;
@@ -248,6 +282,107 @@ main {
 
     .bio {
       margin-bottom: 3rem;
+    }
+
+    .links {
+      margin-bottom: 4rem;
+    }
+
+    .frames {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+
+      .frame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        color: #858584;
+
+        h4 {
+          color: #858584;
+          font-weight: 600;
+          padding: 1.5rem 0;
+        }
+
+        .number {
+          background-color: #3b3b3b;
+          border-radius: 20px;
+          padding: 5px 10px;
+          font-family: "Space Mono";
+          font-weight: 400;
+          font-size: 1.6rem;
+          margin-left: 2.6rem;
+          color: #fff;
+        }
+
+        .checked-number {
+          background-color: #858584;
+        }
+
+        .checked {
+          color: #fff;
+        }
+      }
+
+      .checked-frame {
+        border-bottom: 3px solid #858584;
+      }
+    }
+  }
+}
+
+// NFT cards section
+.nft-cards-section {
+  background-color: #3b3b3b;
+  padding: 8rem 0;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+
+    .nft-card {
+      background-color: #2b2b2b;
+      border-radius: 20px;
+
+      a {
+        .card-img {
+          img {
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+          }
+        }
+
+        h4 {
+          margin: 2rem 3rem 0.5rem 3rem;
+        }
+
+        .done-by {
+          margin: 0.5rem 3rem 2.5rem 3rem;
+        }
+
+        .nft-info {
+          margin: 2.5rem 3rem;
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-size: 1.2rem;
+            font-family: "Space Mono";
+            font-weight: 400;
+            color: #858584;
+          }
+
+          h6 {
+            font-size: 1.6rem;
+            font-family: "Space Mono";
+            font-weight: 400;
+            margin-top: 0.8rem;
+          }
+        }
+      }
     }
   }
 }
@@ -381,6 +516,17 @@ footer {
     }
   }
 
+  // NFT cards section
+  .nft-cards-section {
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr);
+
+      .nft-card-7 {
+        display: none;
+      }
+    }
+  }
+
   // Footer section
   footer {
     .wrapper {
@@ -437,6 +583,14 @@ footer {
 
         .statistic {
           margin: 0;
+        }
+      }
+
+      .frames {
+        .frame {
+          .number {
+            font-size: 1.2rem;
+          }
         }
       }
     }
@@ -498,6 +652,33 @@ footer {
           .outlined-btn {
             margin: 0;
             margin-top: 2rem;
+          }
+        }
+      }
+
+      .frames {
+        .frame {
+          .number {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  // NFT cards section
+  .nft-cards-section {
+    .wrapper {
+      grid-template-columns: 1fr;
+
+      .nft-card-4 {
+        display: none;
+      }
+
+      .nft-card {
+        .nft-info {
+          h6 {
+            font-size: 1.2rem;
           }
         }
       }
