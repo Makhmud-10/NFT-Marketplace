@@ -1103,11 +1103,16 @@ footer {
 
             .step {
                 display: flex;
+                align-items: center;
                 padding: 2rem;
                 text-align: left;
 
                 .step-info {
                     margin-left: 2rem;
+
+                    h6 {
+                        margin: 0;
+                    }
                 }
             }
           }

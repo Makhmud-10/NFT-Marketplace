@@ -616,10 +616,13 @@ footer {
     grid-template-columns: 1fr; }
     .how-works-section .wrapper .steps .step {
       display: flex;
+      align-items: center;
       padding: 2rem;
       text-align: left; }
       .how-works-section .wrapper .steps .step .step-info {
-        margin-left: 2rem; } }
+        margin-left: 2rem; }
+        .how-works-section .wrapper .steps .step .step-info h6 {
+          margin: 0; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
