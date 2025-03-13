@@ -427,6 +427,24 @@ main .wrapper {
         .mushrooms-section .wrapper .mushroom-info .auction-deadline .deadline p {
           margin: 0; }
 
+.how-works-section .wrapper h3 {
+  margin-bottom: 1rem; }
+.how-works-section .wrapper h5 {
+  margin-bottom: 4.8rem; }
+.how-works-section .wrapper .steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem; }
+  .how-works-section .wrapper .steps .step {
+    text-align: center;
+    background-color: #3b3b3b;
+    padding: 1rem 3rem 3rem;
+    border-radius: 30px; }
+    .how-works-section .wrapper .steps .step .step-icon img {
+      width: 100%; }
+    .how-works-section .wrapper .steps .step h6 {
+      margin: 2rem 0 1rem 0; }
+
 footer {
   padding: 4rem 0; }
   footer .wrapper .footer-info {
@@ -531,6 +549,12 @@ footer {
   .mushrooms-section .wrapper .mushroom-info h3 {
     font-size: 3.8rem; }
 
+  .how-works-section .wrapper .steps .step h6 {
+    font-size: 1.6rem; }
+  .how-works-section .wrapper .steps .step p {
+    font-size: 1.2rem;
+    line-height: 140%; }
+
   footer .wrapper .footer-info {
     display: grid;
     grid-template-columns: 1fr; }
@@ -586,7 +610,16 @@ footer {
     .mushrooms-section .wrapper .mushroom-info h3 {
       margin: 3rem 0; }
     .mushrooms-section .wrapper .mushroom-info .btn {
-      margin-top: 4rem; } }
+      margin-top: 4rem; }
+
+  .how-works-section .wrapper .steps {
+    grid-template-columns: 1fr; }
+    .how-works-section .wrapper .steps .step {
+      display: flex;
+      padding: 2rem;
+      text-align: left; }
+      .how-works-section .wrapper .steps .step .step-info {
+        margin-left: 2rem; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
