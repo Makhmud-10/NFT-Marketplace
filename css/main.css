@@ -651,7 +651,8 @@ footer {
 
   .contact-section .wrapper {
     grid-template-columns: 1fr;
-    background-color: transparent; } }
+    background-color: transparent;
+    padding: 0; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
