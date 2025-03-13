@@ -12,6 +12,10 @@
   font-weight: 600; }
 @font-face {
   font-family: "Space Mono";
+  src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf");
+  font-weight: 400; }
+@font-face {
+  font-family: "Space Mono";
   src: url("../fonts/Space_Mono/SpaceMono-Bold.ttf");
   font-weight: 700; }
 * {
@@ -30,6 +34,9 @@ section {
 
 footer {
   background-color: #3b3b3b; }
+
+main, section {
+  padding: 8rem 0; }
 
 .wrapper {
   width: 70%;
@@ -94,13 +101,15 @@ a {
   .logo a img {
     margin-right: 1.2rem; }
 
-.filled-button {
+.button {
   background-color: #a259ff;
   border-radius: 20px;
   border: 2px solid #a259ff; }
-  .filled-button:hover {
+  .button img {
+    padding-right: 1.2rem; }
+  .button:hover {
     background-color: transparent; }
-  .filled-button img {
+  .button img {
     vertical-align: middle; }
 
 .done-by {
@@ -133,9 +142,9 @@ button {
   position: relative;
   right: 3rem;
   cursor: pointer; }
-  button.filled-button {
+  button.button {
     border: 0.5px solid #a259ff; }
-    button.filled-button:hover {
+    button.button:hover {
       background-color: #a259ff; }
 
 header .header-wrapper {
@@ -151,92 +160,142 @@ header .header-wrapper {
     align-items: center; }
     header .header-wrapper nav ul li a {
       padding: 1.2rem 2rem; }
-    header .header-wrapper nav ul li .filled-button {
+    header .header-wrapper nav ul li .button {
       padding: 1.8rem 2.8rem; }
 
-main {
-  padding: 8rem 0; }
-  main .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem; }
-    main .wrapper .about {
-      grid-column: 1/2;
-      grid-row: 1/2; }
-      main .wrapper .about h1 {
-        width: 42rem; }
-      main .wrapper .about h5 {
-        margin-top: 2rem; }
-    main .wrapper .info {
-      grid-column: 1/2;
-      grid-row: 2/3;
+main .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem; }
+  main .wrapper .about {
+    grid-column: 1/2;
+    grid-row: 1/2; }
+    main .wrapper .about h1 {
+      width: 42rem; }
+    main .wrapper .about h5 {
       margin-top: 2rem; }
-      main .wrapper .info .btn .filled-button {
-        padding: 2rem 5rem; }
-      main .wrapper .info .statistics {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 6rem; }
-        main .wrapper .info .statistics p {
-          font-size: 2.4rem;
-          font-weight: 300; }
-    main .wrapper .card {
-      grid-column: 2/3;
-      grid-row: 1/3;
-      border-radius: 20px;
-      background-color: #3b3b3b; }
-      main .wrapper .card a .card-img img {
-        width: 100%;
-        height: 470px;
-        border-radius: 20px 20px 0 0; }
-      main .wrapper .card a h6 {
-        margin: 2rem 0 1rem 2rem; }
-      main .wrapper .card a .done-by {
-        margin: 2rem; }
-        main .wrapper .card a .done-by img {
-          display: inline-block;
-          width: 24px;
-          border-radius: 50%;
-          margin-right: 1.2rem;
-          vertical-align: middle; }
-        main .wrapper .card a .done-by p {
-          display: inline-block;
-          font-size: 1.6rem;
-          font-weight: 300; }
+  main .wrapper .info {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: 2rem; }
+    main .wrapper .info .btn .button {
+      padding: 2rem 5rem; }
+    main .wrapper .info .statistics {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 6rem; }
+      main .wrapper .info .statistics p {
+        font-size: 2.4rem;
+        font-weight: 300; }
+  main .wrapper .card {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    border-radius: 20px;
+    background-color: #3b3b3b; }
+    main .wrapper .card a .card-img img {
+      width: 100%;
+      height: 470px;
+      border-radius: 20px 20px 0 0; }
+    main .wrapper .card a h6 {
+      margin: 2rem 0 1rem 2rem; }
+    main .wrapper .card a .done-by {
+      margin: 2rem; }
+      main .wrapper .card a .done-by img {
+        display: inline-block;
+        width: 24px;
+        border-radius: 50%;
+        margin-right: 1.2rem;
+        vertical-align: middle; }
+      main .wrapper .card a .done-by p {
+        display: inline-block;
+        font-size: 1.6rem;
+        font-weight: 300; }
 
-.collection-section {
-  padding: 8rem 0; }
-  .collection-section .wrapper h3 {
-    margin-bottom: 1rem; }
-  .collection-section .wrapper h5 {
-    margin-bottom: 6rem; }
-  .collection-section .wrapper .collection-types {
+.collection-section .wrapper h3 {
+  margin-bottom: 1rem; }
+.collection-section .wrapper h5 {
+  margin-bottom: 6rem; }
+.collection-section .wrapper .collection-types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem; }
+  .collection-section .wrapper .collection-types .collection-type .collections {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem; }
-    .collection-section .wrapper .collection-types .collection-type .collections {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 1.5rem;
-      margin-bottom: 1.5rem; }
-      .collection-section .wrapper .collection-types .collection-type .collections a img {
-        width: 100%;
-        border-radius: 20px; }
-      .collection-section .wrapper .collection-types .collection-type .collections .main-collection {
-        grid-column: 1/4; }
-      .collection-section .wrapper .collection-types .collection-type .collections .collection {
-        background-color: #a259ff;
-        border-radius: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Space Mono";
-        font-weight: 700;
-        font-size: 2.2rem;
-        color: #fff; }
-    .collection-section .wrapper .collection-types .collection-type h6 {
+    grid-gap: 1.5rem;
+    margin-bottom: 1.5rem; }
+    .collection-section .wrapper .collection-types .collection-type .collections a img {
+      width: 100%;
+      border-radius: 20px; }
+    .collection-section .wrapper .collection-types .collection-type .collections .main-collection {
+      grid-column: 1/4; }
+    .collection-section .wrapper .collection-types .collection-type .collections .collection {
+      background-color: #a259ff;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Space Mono";
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #fff; }
+  .collection-section .wrapper .collection-types .collection-type h6 {
+    margin-bottom: 1rem; }
+
+.creators-section .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .creators-section .wrapper .creator-head {
+    grid-column: 1/4;
+    grid-row: 1/2; }
+    .creators-section .wrapper .creator-head h3 {
       margin-bottom: 1rem; }
+    .creators-section .wrapper .creator-head h5 {
+      margin-bottom: 6rem; }
+  .creators-section .wrapper .btn {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    margin-bottom: 6rem; }
+    .creators-section .wrapper .btn .button {
+      padding: 1.8rem 5rem;
+      background-color: transparent; }
+  .creators-section .wrapper .creators {
+    grid-column: 1/5;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem; }
+    .creators-section .wrapper .creators .creator {
+      text-align: center;
+      background-color: #3b3b3b;
+      border-radius: 20px;
+      position: relative; }
+      .creators-section .wrapper .creators .creator a {
+        padding: 2rem; }
+        .creators-section .wrapper .creators .creator a .number {
+          position: absolute;
+          top: 1.8rem;
+          left: 2rem;
+          color: #858584;
+          background-color: #2b2b2b;
+          border-radius: 50%;
+          padding: 4px 10px;
+          font-family: "Space Mono";
+          font-size: 1.6rem;
+          font-weight: 400; }
+        .creators-section .wrapper .creators .creator a .creator-img {
+          margin-bottom: 2rem; }
+          .creators-section .wrapper .creators .creator a .creator-img img {
+            width: 110px;
+            border-radius: 50%; }
+        .creators-section .wrapper .creators .creator a p {
+          margin-top: 5px;
+          color: #858584;
+          font-weight: 400; }
+          .creators-section .wrapper .creators .creator a p span {
+            font-family: "Space Mono";
+            color: #FFF; }
 
 footer {
   padding: 4rem 0; }
@@ -295,11 +354,11 @@ footer {
     padding: 2rem; }
     header .header-wrapper nav {
       margin-top: 20px; }
-      header .header-wrapper nav ul li .filled-button {
+      header .header-wrapper nav ul li .button {
         background-color: transparent;
         border: transparent;
         padding: 1.2rem 2rem; }
-        header .header-wrapper nav ul li .filled-button img {
+        header .header-wrapper nav ul li .button img {
           display: none; }
 
   main .wrapper .about h1 {
@@ -313,6 +372,17 @@ footer {
     grid-template-columns: repeat(2, 1fr); }
     .collection-section .wrapper .collection-types .type-3 {
       display: none; }
+
+  .creators-section .wrapper .creators {
+    grid-template-columns: repeat(2, 1fr); }
+    .creators-section .wrapper .creators .creator-7 {
+      display: none; }
+    .creators-section .wrapper .creators .creator a {
+      text-align: left;
+      display: flex;
+      align-items: center; }
+      .creators-section .wrapper .creators .creator a .creator-img {
+        margin: 0 2rem 0 0; }
 
   footer .wrapper .footer-info {
     display: grid;
@@ -330,11 +400,31 @@ footer {
       grid-area: about; }
     main .wrapper .info {
       grid-area: info; }
-      main .wrapper .info .btn .filled-button {
+      main .wrapper .info .btn .button {
         display: flex;
         justify-content: center; }
     main .wrapper .card {
-      grid-area: card; } }
+      grid-area: card; }
+
+  .creators-section .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: "head" "creators" "btn"; }
+    .creators-section .wrapper .creator-head {
+      grid-area: head; }
+      .creators-section .wrapper .creator-head h5 {
+        margin-bottom: 4rem; }
+    .creators-section .wrapper .btn {
+      grid-area: btn;
+      margin: 4rem 0 0 0;
+      width: 100%; }
+      .creators-section .wrapper .btn .button {
+        display: flex;
+        justify-content: center; }
+    .creators-section .wrapper .creators {
+      grid-area: creators;
+      grid-template-columns: 1fr; }
+      .creators-section .wrapper .creators .creator-6 {
+        display: none; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
