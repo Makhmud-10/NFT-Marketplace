@@ -22,10 +22,10 @@ html {
 header,
 main,
 section {
-  background-color: #2B2B2B; }
+  background-color: #2b2b2b; }
 
 footer {
-  background-color: #3B3B3B; }
+  background-color: #3b3b3b; }
 
 .wrapper {
   width: 70%;
@@ -40,12 +40,24 @@ h5,
 p,
 a,
 button {
-  color: #FFF; }
+  color: #fff; }
+
+h1 {
+  font-size: 5.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem; }
 
 h2 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   font-weight: 700; }
+
+h5 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem; }
 
 p {
   font-size: 1.6rem; }
@@ -64,14 +76,15 @@ a {
   .logo a img {
     margin-right: 1.2rem; }
 
-.filled-button {
-  background-color: #A259FF;
+.button {
+  background-color: #a259ff;
   border-radius: 20px;
-  border: 2px solid #A259FF; }
-  .filled-button:hover {
+  border: 2px solid #a259ff; }
+  .button:hover {
     background-color: transparent; }
-  .filled-button img {
-    vertical-align: middle; }
+  .button img {
+    vertical-align: middle;
+    padding-right: 1rem; }
 
 .email-form {
   display: flex;
@@ -83,19 +96,22 @@ input {
   font-size: 1.6rem;
   font-family: "Work Sans";
   border-radius: 20px;
-  border: none; }
+  border: none;
+  padding: 1.2rem 5rem 1.2rem 5.2rem; }
 
 button {
+  display: flex;
+  align-items: center;
   padding: 2rem 5rem;
   font-size: 1.6rem;
   font-weight: 600;
   position: relative;
   right: 3rem;
   cursor: pointer; }
-  button.filled-button {
-    border: 0.5px solid #A259FF; }
-    button.filled-button:hover {
-      background-color: #A259FF; }
+  button.button {
+    border: 0.5px solid #a259ff; }
+    button.button:hover {
+      background-color: #a259ff; }
 
 header .header-wrapper {
   width: 80%;
@@ -110,8 +126,33 @@ header .header-wrapper {
     align-items: center; }
     header .header-wrapper nav ul li a {
       padding: 1.2rem 2rem; }
-    header .header-wrapper nav ul li .filled-button {
+    header .header-wrapper nav ul li .button {
       padding: 1.8rem 2.8rem; }
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6rem;
+  align-items: center; }
+  main .hero-img img {
+    width: 100%; }
+  main .hero-form {
+    padding-right: 150px; }
+    main .hero-form form div {
+      position: relative; }
+      main .hero-form form div img {
+        position: absolute;
+        top: 2rem;
+        left: 2rem; }
+    main .hero-form form input {
+      margin: 7.5px 0; }
+    main .hero-form form button {
+      margin-top: 2rem;
+      margin-left: 3rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: 1.3rem 8.8rem; }
 
 footer {
   padding: 4rem 0; }
@@ -136,7 +177,7 @@ footer {
   footer .wrapper p,
   footer .wrapper a {
     margin: 2rem 0;
-    color: #CCC;
+    color: #ccc;
     font-weight: 400;
     line-height: 140%; }
   footer .wrapper .copy {
@@ -147,20 +188,33 @@ footer {
   .wrapper {
     width: 90%; }
 
+  h1 {
+    font-size: 3.8rem; }
+
+  h5 {
+    font-size: 1.6rem;
+    line-height: 140%; }
+
   header .header-wrapper {
-    width: 90%; } }
+    width: 90%; }
+
+  main .hero-img img {
+    height: 570px; } }
 @media screen and (max-width: 992px) {
   header .header-wrapper {
     flex-direction: column;
     padding: 2rem; }
     header .header-wrapper nav {
       margin-top: 20px; }
-      header .header-wrapper nav ul li .filled-button {
+      header .header-wrapper nav ul li .button {
         background-color: transparent;
         border: transparent;
         padding: 1.2rem 2rem; }
-        header .header-wrapper nav ul li .filled-button img {
+        header .header-wrapper nav ul li .button img {
           display: none; }
+
+  main .hero-form {
+    padding-right: 10px; }
 
   footer .wrapper .footer-info {
     display: grid;
@@ -169,8 +223,18 @@ footer {
       margin-left: 0; } }
 @media screen and (max-width: 768px) {
   header .header-wrapper {
-    width: 98%; } }
-@media screen and (max-width: 576px) {
+    width: 98%; }
+
+  main {
+    grid-template-columns: 1fr;
+    padding-bottom: 100px; }
+    main .hero-form {
+      width: 90%;
+      margin: auto; }
+      main .hero-form input, main .hero-form button {
+        width: 100%;
+        padding-right: 0; } }
+@media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
     .email-form input {
