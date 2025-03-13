@@ -374,6 +374,59 @@ main .wrapper {
         font-size: 1.6rem;
         font-weight: 400; }
 
+.mushrooms-section {
+  background: linear-gradient(transparent, #a259ff), url("../images/keemun-mushroom-1.png") no-repeat center/cover;
+  min-height: 95vh; }
+  .mushrooms-section .wrapper .mushroom-info {
+    display: grid;
+    grid-template-columns: 1fr 35rem;
+    align-items: flex-end;
+    margin-top: 25rem; }
+    .mushrooms-section .wrapper .mushroom-info .done-by {
+      background-color: #3b3b3b;
+      border-radius: 20px;
+      width: 15rem;
+      grid-row: 1/2; }
+      .mushrooms-section .wrapper .mushroom-info .done-by a {
+        padding: 1.1rem 2rem;
+        display: flex;
+        align-items: center; }
+    .mushrooms-section .wrapper .mushroom-info h3 {
+      font-size: 5.1rem;
+      margin: 5rem 0;
+      grid-row: 2/3; }
+    .mushrooms-section .wrapper .mushroom-info .btn {
+      grid-row: 3/4;
+      margin-bottom: 2rem; }
+      .mushrooms-section .wrapper .mushroom-info .btn .button {
+        padding: 2rem 5rem;
+        background-color: #fff;
+        border: 2px solid #fff;
+        color: #2b2b2b; }
+    .mushrooms-section .wrapper .mushroom-info .auction-deadline {
+      grid-column: 2/3;
+      grid-row: 2/4;
+      background-color: #3b3b3b80;
+      padding: 3rem;
+      border-radius: 20px;
+      height: 15rem; }
+      .mushrooms-section .wrapper .mushroom-info .auction-deadline p {
+        font-family: "Space Mono";
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-left: 1rem; }
+      .mushrooms-section .wrapper .mushroom-info .auction-deadline .deadline {
+        display: flex;
+        align-items: center; }
+        .mushrooms-section .wrapper .mushroom-info .auction-deadline .deadline .time {
+          margin-left: 10px; }
+        .mushrooms-section .wrapper .mushroom-info .auction-deadline .deadline h3 {
+          font-family: "Space Mono";
+          font-size: 3.8rem;
+          margin: 0; }
+        .mushrooms-section .wrapper .mushroom-info .auction-deadline .deadline p {
+          margin: 0; }
+
 footer {
   padding: 4rem 0; }
   footer .wrapper .footer-info {
@@ -475,6 +528,9 @@ footer {
     .nfts-section .wrapper .nfts .nft-3 {
       display: none; }
 
+  .mushrooms-section .wrapper .mushroom-info h3 {
+    font-size: 3.8rem; }
+
   footer .wrapper .footer-info {
     display: grid;
     grid-template-columns: 1fr; }
@@ -522,7 +578,15 @@ footer {
   .categories-section .wrapper .categories {
     grid-template-columns: repeat(2, 1fr); }
     .categories-section .wrapper .categories a .category .icon {
-      height: 180px; } }
+      height: 180px; }
+
+  .mushrooms-section .wrapper .mushroom-info {
+    display: inline-block;
+    margin-top: 10rem; }
+    .mushrooms-section .wrapper .mushroom-info h3 {
+      margin: 3rem 0; }
+    .mushrooms-section .wrapper .mushroom-info .btn {
+      margin-top: 4rem; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
@@ -551,6 +615,26 @@ footer {
   .nfts-section .wrapper .nfts {
     grid-template-columns: 1fr; }
     .nfts-section .wrapper .nfts .nft-3 {
-      display: inline-block; } }
+      display: inline-block; }
+
+  .mushrooms-section {
+    min-height: 70vh; }
+    .mushrooms-section .wrapper .mushroom-info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-top: 0; }
+      .mushrooms-section .wrapper .mushroom-info h3 {
+        margin: 3rem 0; }
+      .mushrooms-section .wrapper .mushroom-info .auction-deadline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; }
+      .mushrooms-section .wrapper .mushroom-info .btn {
+        width: 100%; }
+        .mushrooms-section .wrapper .mushroom-info .btn .button {
+          display: flex;
+          justify-content: center; } }
 
 /*# sourceMappingURL=main.css.map */
