@@ -57,9 +57,9 @@ button {
 }
 
 h1 {
-    font-size: 5.1rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
+  font-size: 5.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -69,11 +69,11 @@ h2 {
 }
 
 h5 {
-    font-size: 2.2rem;
-    font-weight: 400;
-    line-height: 160%;
-    text-transform: capitalize;
-    margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
 }
 
 p {
@@ -184,46 +184,46 @@ header {
 
 // Hero section
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 6rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6rem;
+  align-items: center;
 
-    .hero-img {
+  .hero-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .hero-form {
+    padding-right: 150px;
+
+    form {
+      div {
+        position: relative;
+
         img {
-            width: 100%;
+          position: absolute;
+          top: 2rem;
+          left: 2rem;
         }
+      }
+
+      input {
+        margin: 7.5px 0;
+      }
+
+      button {
+        margin-top: 2rem;
+        margin-left: 3rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        padding: 1.3rem 8.8rem;
+      }
     }
-
-    .hero-form {
-        padding-right: 150px;
-
-        form {
-            div {
-                position: relative;
-
-                img {
-                    position: absolute;
-                    top: 2rem;
-                    left: 2rem;
-                }
-            }
-
-            input {
-                margin: 7.5px 0;
-            }
-
-            button {
-                margin-top: 2rem;
-                margin-left: 3rem;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-
-                padding: 1.3rem 8.8rem;
-            }
-        }
-    }
+  }
 }
 
 // Footer section
@@ -293,12 +293,12 @@ footer {
 
   h1 {
     font-size: 3.8rem;
-}
+  }
 
-    h5 {
-        font-size: 1.6rem;
-        line-height: 140%;
-    }
+  h5 {
+    font-size: 1.6rem;
+    line-height: 140%;
+  }
 
   // Header section
   header {
@@ -307,14 +307,14 @@ footer {
     }
   }
 
-//   Hero section
-main {
+  //   Hero section
+  main {
     .hero-img {
-        img {
-            height: 570px;
-        }
+      img {
+        height: 570px;
+      }
     }
-}
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -344,12 +344,12 @@ main {
     }
   }
 
-//   Hero section
-main {
+  //   Hero section
+  main {
     .hero-form {
-        padding-right: 10px;
+      padding-right: 10px;
     }
-}
+  }
 
   // Footer section
   footer {
@@ -374,23 +374,22 @@ main {
     }
   }
 
-
- // Hero section
- main {
+  // Hero section
+  main {
     grid-template-columns: 1fr;
     padding-bottom: 100px;
 
     .hero-form {
-        width: 90%;
-        margin: auto;
+      width: 90%;
+      margin: auto;
 
-        input, button {
-            width: 100%;
-            padding-right: 0;
-        }
+      input,
+      button {
+        width: 100%;
+        padding-right: 0;
+      }
     }
-}
-
+  }
 }
 
 @media screen and (max-width: 588px) {

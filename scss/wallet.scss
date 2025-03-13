@@ -56,10 +56,24 @@ button {
   color: #fff;
 }
 
+h1 {
+  font-size: 5.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
 h2 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   font-weight: 700;
+}
+
+h5 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
 }
 
 p {
@@ -98,6 +112,7 @@ a {
 
   img {
     vertical-align: middle;
+    padding-right: 1rem;
   }
 }
 
@@ -115,6 +130,7 @@ input {
   font-family: "Work Sans";
   border-radius: 20px;
   border: none;
+  padding: 1.2rem 5rem 1.2rem 5.2rem;
 }
 
 button {
@@ -159,6 +175,44 @@ header {
 
           .button {
             padding: 1.8rem 2.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Hero section
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 6rem;
+  align-items: center;
+
+  .hero-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .wallet-info {
+    padding-right: 150px;
+
+    .wallets {
+      .wallet {
+        a {
+          display: flex;
+          align-items: center;
+          font-size: 2.2rem;
+          margin-bottom: 2rem;
+          background-color: #3b3b3b;
+          border-radius: 20px;
+          border: 2px solid #a259ff;
+          padding: 2rem;
+          width: 320px;
+
+          img {
+            margin-right: 2rem;
           }
         }
       }
@@ -231,10 +285,38 @@ footer {
     width: 90%;
   }
 
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
+    line-height: 140%;
+  }
+
   // Header section
   header {
     .header-wrapper {
       width: 90%;
+    }
+  }
+
+  //   Hero section
+  main {
+    .hero-img {
+      img {
+        height: 570px;
+      }
+    }
+
+    .wallet-info {
+      .wallets {
+        .wallet {
+          a {
+            padding: 1.5rem 2rem;
+          }
+        }
+      }
     }
   }
 }
@@ -266,6 +348,13 @@ footer {
     }
   }
 
+  //   Hero section
+  main {
+    .wallet-info {
+      padding-right: 10px;
+    }
+  }
+
   // Footer section
   footer {
     .wrapper {
@@ -288,9 +377,28 @@ footer {
       width: 98%;
     }
   }
+
+  // Hero section
+  main {
+    grid-template-columns: 1fr;
+    padding-bottom: 100px;
+
+    .wallet-info {
+      width: 90%;
+      margin: auto;
+
+      .wallets {
+        .wallet {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 588px) {
   // Global styles
   .email-form {
     flex-direction: column;
