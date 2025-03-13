@@ -8,6 +8,9 @@
   font-weight: 600; }
 @font-face {
   font-family: "Space Mono";
+  src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf"); }
+@font-face {
+  font-family: "Space Mono";
   src: url("../fonts/Space_Mono/SpaceMono-Bold.ttf");
   font-weight: 700; }
 * {
@@ -22,10 +25,10 @@ html {
 header,
 main,
 section {
-  background-color: #2B2B2B; }
+  background-color: #2b2b2b; }
 
 footer {
-  background-color: #3B3B3B; }
+  background-color: #3b3b3b; }
 
 .wrapper {
   width: 70%;
@@ -40,12 +43,27 @@ h5,
 p,
 a,
 button {
-  color: #FFF; }
+  color: #fff; }
+
+h1 {
+  font-size: 5.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem; }
 
 h2 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   font-weight: 700; }
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: capitalize; }
+
+h5 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 3rem; }
 
 p {
   font-size: 1.6rem; }
@@ -64,14 +82,15 @@ a {
   .logo a img {
     margin-right: 1.2rem; }
 
-.filled-button {
-  background-color: #A259FF;
+.button {
+  background-color: #a259ff;
   border-radius: 20px;
-  border: 2px solid #A259FF; }
-  .filled-button:hover {
+  border: 2px solid #a259ff; }
+  .button:hover {
     background-color: transparent; }
-  .filled-button img {
-    vertical-align: middle; }
+  .button img {
+    vertical-align: middle;
+    margin-right: 1rem; }
 
 .email-form {
   display: flex;
@@ -86,16 +105,39 @@ input {
   border: none; }
 
 button {
+  display: flex;
+  align-items: center;
   padding: 2rem 5rem;
   font-size: 1.6rem;
   font-weight: 600;
   position: relative;
   right: 3rem;
   cursor: pointer; }
-  button.filled-button {
-    border: 0.5px solid #A259FF; }
-    button.filled-button:hover {
-      background-color: #A259FF; }
+  button.button {
+    border: 0.5px solid #a259ff; }
+    button.button:hover {
+      background-color: #a259ff; }
+
+.done-by {
+  display: flex;
+  align-items: center; }
+  .done-by img {
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 1.2rem; }
+  .done-by p {
+    font-size: 1.6rem;
+    font-weight: 300; }
+
+.line {
+  border-top: 2px solid #3b3b3b;
+  width: 100%;
+  position: relative;
+  bottom: 70px; }
+
+.footer-line {
+  border-top: 3px solid #2b2b2b;
+  top: 80px; }
 
 header .header-wrapper {
   width: 80%;
@@ -110,8 +152,89 @@ header .header-wrapper {
     align-items: center; }
     header .header-wrapper nav ul li a {
       padding: 1.2rem 2rem; }
-    header .header-wrapper nav ul li .filled-button {
+    header .header-wrapper nav ul li .button {
       padding: 1.8rem 2.8rem; }
+
+main {
+  padding-top: 8rem; }
+  main .wrapper .search {
+    width: 100%;
+    position: relative; }
+    main .wrapper .search input {
+      background-color: transparent;
+      border: 1px solid #3b3b3b;
+      width: 100%;
+      padding: 2rem;
+      font-size: 1.6rem; }
+    main .wrapper .search input::placeholder {
+      color: #858584;
+      opacity: 1; }
+    main .wrapper .search img {
+      position: absolute;
+      right: 2rem;
+      top: 1.8rem; }
+  main .wrapper .frames {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-top: 8rem; }
+    main .wrapper .frames .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      color: #858584; }
+      main .wrapper .frames .frame h4 {
+        color: #858584;
+        font-weight: 600;
+        padding: 1.5rem 0; }
+      main .wrapper .frames .frame .number {
+        background-color: #3b3b3b;
+        border-radius: 20px;
+        padding: 5px 10px;
+        font-family: "Space Mono";
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin-left: 2.6rem;
+        color: #fff; }
+      main .wrapper .frames .frame .checked-number {
+        background-color: #858584; }
+      main .wrapper .frames .frame .checked {
+        color: #fff; }
+    main .wrapper .frames .checked-frame {
+      border-bottom: 3px solid #858584; }
+
+.nft-cards-section {
+  background-color: #3b3b3b;
+  padding: 8rem 0; }
+  .nft-cards-section .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem; }
+    .nft-cards-section .wrapper .nft-card {
+      background-color: #2b2b2b;
+      border-radius: 20px; }
+      .nft-cards-section .wrapper .nft-card a .card-img img {
+        width: 100%;
+        border-radius: 20px 20px 0 0; }
+      .nft-cards-section .wrapper .nft-card a h4 {
+        margin: 2rem 3rem 1rem 3rem; }
+      .nft-cards-section .wrapper .nft-card a .done-by {
+        margin: 0.5rem 3rem 2.5rem 3rem; }
+      .nft-cards-section .wrapper .nft-card a .nft-info {
+        margin: 2.5rem 3rem;
+        display: flex;
+        justify-content: space-between; }
+        .nft-cards-section .wrapper .nft-card a .nft-info p {
+          font-size: 1.2rem;
+          font-family: "Space Mono";
+          font-weight: 400;
+          color: #858584; }
+        .nft-cards-section .wrapper .nft-card a .nft-info h6 {
+          font-size: 1.6rem;
+          font-family: "Space Mono";
+          font-weight: 400;
+          margin-top: 0.8rem; }
 
 footer {
   padding: 4rem 0; }
@@ -136,7 +259,7 @@ footer {
   footer .wrapper p,
   footer .wrapper a {
     margin: 2rem 0;
-    color: #CCC;
+    color: #ccc;
     font-weight: 400;
     line-height: 140%; }
   footer .wrapper .copy {
@@ -155,12 +278,17 @@ footer {
     padding: 2rem; }
     header .header-wrapper nav {
       margin-top: 20px; }
-      header .header-wrapper nav ul li .filled-button {
+      header .header-wrapper nav ul li .button {
         background-color: transparent;
         border: transparent;
         padding: 1.2rem 2rem; }
-        header .header-wrapper nav ul li .filled-button img {
+        header .header-wrapper nav ul li .button img {
           display: none; }
+
+  .nft-cards-section .wrapper {
+    grid-template-columns: repeat(2, 1fr); }
+    .nft-cards-section .wrapper .nft-card-9 {
+      display: none; }
 
   footer .wrapper .footer-info {
     display: grid;
@@ -169,8 +297,13 @@ footer {
       margin-left: 0; } }
 @media screen and (max-width: 768px) {
   header .header-wrapper {
-    width: 98%; } }
-@media screen and (max-width: 576px) {
+    width: 98%; }
+
+  main .wrapper .frames .frame .number {
+    font-size: 1.2rem; }
+  main .wrapper .frames .frame h4 {
+    font-size: 1.6rem; } }
+@media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
     .email-form input {
@@ -180,9 +313,22 @@ footer {
       width: 100%;
       right: 0; }
 
+  h6 {
+    font-size: 1.2rem; }
+
   header .header-wrapper nav ul {
     flex-direction: column; }
     header .header-wrapper nav ul li {
-      margin-top: 1.5rem; } }
+      margin-top: 1.5rem; }
+
+  main .wrapper .frames .frame .number {
+    display: none; }
+
+  .nft-cards-section .wrapper {
+    grid-template-columns: 1fr; }
+    .nft-cards-section .wrapper .nft-card-6 {
+      display: none; }
+    .nft-cards-section .wrapper .nft-card .nft-info h6 {
+      font-size: 1.2rem; } }
 
 /*# sourceMappingURL=marketplace.css.map */

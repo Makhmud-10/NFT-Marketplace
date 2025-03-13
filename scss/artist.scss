@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url('../fonts/Space_Mono/SpaceMono-Regular.ttf');
+  src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf");
   font-weight: 400;
 }
 
@@ -129,6 +129,7 @@ a {
 
   img {
     vertical-align: middle;
+    margin-right: 1rem;
   }
 }
 
@@ -184,7 +185,7 @@ button {
 }
 
 .line {
-  border-top: 1px solid #3b3b3b;
+  border-top: 2px solid #3b3b3b;
   width: 100%;
   position: relative;
   bottom: 70px;
@@ -225,9 +226,10 @@ header {
   }
 }
 
-// Hero
+// Hero section
 main {
-  background: linear-gradient(transparent, #a259ff), url('../images/virtual-world.png') no-repeat center/cover;
+  background: linear-gradient(transparent, #a259ff),
+    url("../images/virtual-world.png") no-repeat center/cover;
   height: 320px;
 
   .wrapper {
@@ -494,9 +496,9 @@ footer {
     .wrapper {
       .animakid-img {
         top: 210px;
+      }
     }
   }
-}
 
   // Artist info section
   .artist-info-section {
@@ -543,22 +545,22 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    // Global styles
-    h1 {
-      font-size: 3.8rem;
-    }
+  // Global styles
+  h1 {
+    font-size: 3.8rem;
+  }
 
-    h3 {
-      font-size: 2.2rem;
-    }
+  h3 {
+    font-size: 2.2rem;
+  }
 
-    h4 {
-      font-size: 1.6rem;
-    }
+  h4 {
+    font-size: 1.6rem;
+  }
 
-    h5 {
-      font-size: 1.6rem;
-    }
+  h5 {
+    font-size: 1.6rem;
+  }
 
   // Header section
   header {
@@ -635,8 +637,8 @@ footer {
     .wrapper {
       .animakid-img {
         top: 180px;
+      }
     }
-  }
   }
 
   // Artist info section
