@@ -772,6 +772,50 @@ footer {
   }
 }
 
+// Contact section {
+.contact-section {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 4rem;
+    background-color: #3b3b3b;
+    grid-gap: 4rem;
+    border-radius: 20px;
+
+    .contact-img {
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+
+    .contact-form {
+      h3 {
+        margin-bottom: 1rem;
+      }
+
+      h5 {
+        margin-bottom: 4rem;
+      }
+
+      .email-form {
+        flex-direction: column;
+
+        input {
+          width: 100%;
+          margin-bottom: 1.6rem;
+        }
+
+        button {
+          width: 100%;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
 // Media queries
 @media screen and (max-width: 1200px) {
   // Global styles
@@ -1095,29 +1139,38 @@ footer {
     }
   }
 
-    // How works section
-    .how-works-section {
-        .wrapper {
-          .steps {
-            grid-template-columns: 1fr;
+  // How works section
+  .how-works-section {
+    .wrapper {
+      .steps {
+        grid-template-columns: 1fr;
 
-            .step {
-                display: flex;
-                align-items: center;
-                padding: 2rem;
-                text-align: left;
+        .step {
+          display: flex;
+          align-items: center;
+          padding: 2rem;
+          text-align: left;
 
-                .step-info {
-                    margin-left: 2rem;
+          .step-info {
+            margin-left: 2rem;
 
-                    h6 {
-                        margin: 0;
-                    }
-                }
+            h6 {
+              margin: 0;
+              margin-bottom: 1rem;
             }
           }
         }
       }
+    }
+  }
+
+  //   Contact section
+  .contact-section {
+    .wrapper {
+      grid-template-columns: 1fr;
+      background-color: transparent;
+    }
+  }
 }
 
 @media screen and (max-width: 588px) {

@@ -475,6 +475,30 @@ footer {
     border-top: 1px solid #858584;
     padding-top: 2rem; }
 
+.contact-section .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 4rem;
+  background-color: #3b3b3b;
+  grid-gap: 4rem;
+  border-radius: 20px; }
+  .contact-section .wrapper .contact-img img {
+    width: 100%;
+    border-radius: 20px; }
+  .contact-section .wrapper .contact-form h3 {
+    margin-bottom: 1rem; }
+  .contact-section .wrapper .contact-form h5 {
+    margin-bottom: 4rem; }
+  .contact-section .wrapper .contact-form .email-form {
+    flex-direction: column; }
+    .contact-section .wrapper .contact-form .email-form input {
+      width: 100%;
+      margin-bottom: 1.6rem; }
+    .contact-section .wrapper .contact-form .email-form button {
+      width: 100%;
+      right: 0; }
+
 @media screen and (max-width: 1200px) {
   .wrapper {
     width: 90%; }
@@ -622,7 +646,12 @@ footer {
       .how-works-section .wrapper .steps .step .step-info {
         margin-left: 2rem; }
         .how-works-section .wrapper .steps .step .step-info h6 {
-          margin: 0; } }
+          margin: 0;
+          margin-bottom: 1rem; }
+
+  .contact-section .wrapper {
+    grid-template-columns: 1fr;
+    background-color: transparent; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }
