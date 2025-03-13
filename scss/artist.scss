@@ -56,10 +56,35 @@ button {
   color: #fff;
 }
 
+h1 {
+  font-weight: 600;
+  font-size: 5.1rem;
+}
+
 h2 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-family: "Space Mono";
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+h5 {
+  font-size: 2.2rem;
+  font-family: "Space Mono";
+  font-weight: 700;
+  color: #858584;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -166,6 +191,67 @@ header {
   }
 }
 
+// Hero
+main {
+  background: linear-gradient(transparent, #a259ff), url('../images/virtual-world.png') no-repeat center/cover;
+  height: 320px;
+
+  .wrapper {
+    .animakid-img {
+      position: relative;
+      top: 250px;
+
+      img {
+        border-radius: 20px;
+        border: 2px solid #2b2b2b;
+      }
+    }
+  }
+}
+
+// Artist info section
+.artist-info-section {
+  padding: 4rem 0 ;
+
+  .wrapper {
+    padding-top: 50px;
+
+    .artist-name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .artist-buttons {
+        a {
+          padding: 2rem;
+        }
+
+        .outlined-btn {
+          background-color: transparent;
+          margin-left: 2rem;
+        }
+      }
+    }
+
+    .statistics {
+      display: flex;
+      margin: 3rem 0;
+
+      .statistic {
+        margin-right: 10rem;
+      }
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+
+    .bio {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
 // Footer section
 footer {
   padding: 4rem 0;
@@ -266,6 +352,35 @@ footer {
     }
   }
 
+  // Hero section
+  main {
+    height: 280px;
+
+    .wrapper {
+      .animakid-img {
+        top: 210px;
+    }
+  }
+}
+
+  // Artist info section
+  .artist-info-section {
+    .wrapper {
+      .artist-name {
+        flex-direction: column;
+        align-items: start;
+
+        h1 {
+          margin-bottom: 5rem;
+        }
+
+        .artist-buttons {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
   // Footer section
   footer {
     .wrapper {
@@ -282,15 +397,53 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+    // Global styles
+    h1 {
+      font-size: 3.8rem;
+    }
+
+    h3 {
+      font-size: 2.2rem;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+    }
+
+    h5 {
+      font-size: 1.6rem;
+    }
+
   // Header section
   header {
     .header-wrapper {
       width: 98%;
     }
   }
+
+  // Hero section
+  main {
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  // Artist info section
+  .artist-info-section {
+    .wrapper {
+      .statistics {
+        justify-content: space-between;
+
+        .statistic {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 588px) {
   // Global styles
   .email-form {
     flex-direction: column;
@@ -315,6 +468,36 @@ footer {
 
           li {
             margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Hero section
+  main {
+    height: 250px;
+
+    .wrapper {
+      .animakid-img {
+        top: 180px;
+    }
+  }
+  }
+
+  // Artist info section
+  .artist-info-section {
+    .wrapper {
+      .artist-name {
+        .artist-buttons {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          text-align: center;
+
+          .outlined-btn {
+            margin: 0;
+            margin-top: 2rem;
           }
         }
       }
