@@ -50,12 +50,25 @@ h2 {
   font-family: "Space Mono";
   font-weight: 700; }
 
+h3 {
+  font-size: 3.8rem;
+  font-weight: 600; }
+
+h4 {
+  font-size: 2.8rem;
+  font-family: "Space Mono";
+  font-weight: 700; }
+
 h5 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   color: #858584;
   margin-bottom: 1rem;
   margin-top: 3rem; }
+
+h6 {
+  font-size: 2.2rem;
+  font-weight: 600; }
 
 p {
   font-size: 1.6rem; }
@@ -110,16 +123,38 @@ button {
     button.button:hover {
       background-color: #a259ff; }
 
-.done-by a {
+.done-by {
   display: flex;
   align-items: center; }
-.done-by img {
-  width: 24px;
-  border-radius: 50%;
-  margin-right: 1.2rem; }
-.done-by p {
-  font-size: 1.6rem;
-  font-weight: 300; }
+  .done-by img {
+    width: 24px;
+    border-radius: 50%;
+    margin-right: 1.2rem; }
+  .done-by p {
+    font-size: 1.6rem;
+    font-weight: 300; }
+
+.wrapper-grid {
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .wrapper-grid .head {
+    grid-column: 1/4;
+    grid-row: 1/2; }
+    .wrapper-grid .head h3 {
+      margin-bottom: 6rem; }
+    .wrapper-grid .head h5 {
+      margin-bottom: 6rem; }
+  .wrapper-grid .btn {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    margin-bottom: 6rem; }
+    .wrapper-grid .btn .button {
+      padding: 1.8rem 5rem;
+      background-color: transparent; }
+  .wrapper-grid .all {
+    grid-column: 1/5;
+    grid-row: 2/3; }
 
 header .header-wrapper {
   width: 80%;
@@ -204,6 +239,34 @@ main {
           padding: 1.2rem 0;
           border-radius: 20px; }
 
+.nfts-section .wrapper .nfts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem; }
+  .nfts-section .wrapper .nfts a .nft {
+    background-color: #3b3b3b;
+    padding-bottom: 2.5rem;
+    border-radius: 20px; }
+    .nfts-section .wrapper .nfts a .nft .nft-img img {
+      width: 100%;
+      border-radius: 20px 20px 0 0; }
+    .nfts-section .wrapper .nfts a .nft h6,
+    .nfts-section .wrapper .nfts a .nft .done-by,
+    .nfts-section .wrapper .nfts a .nft .nft-info {
+      margin: 2rem 3rem 0.5rem 3rem; }
+    .nfts-section .wrapper .nfts a .nft .nft-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+      .nfts-section .wrapper .nfts a .nft .nft-info p {
+        color: #858584;
+        font-size: 1.2rem;
+        font-family: "Space Mono";
+        font-weight: 400; }
+      .nfts-section .wrapper .nfts a .nft .nft-info h4 {
+        font-size: 1.6rem;
+        font-weight: 400; }
+
 footer {
   padding: 4rem 0; }
   footer .wrapper .footer-info {
@@ -267,6 +330,11 @@ footer {
   .artist-info-section .wrapper .additional-info .nft-buttons {
     grid-template-columns: repeat(2, 1fr); }
 
+  .nfts-section .wrapper .nfts {
+    grid-template-columns: repeat(2, 1fr); }
+    .nfts-section .wrapper .nfts .nft-7 {
+      display: none; }
+
   footer .wrapper .footer-info {
     display: grid;
     grid-template-columns: 1fr; }
@@ -283,6 +351,23 @@ footer {
       margin-bottom: 2rem; }
     .artist-info-section .wrapper .auction-deadline {
       width: 35rem; } }
+@media screen and (max-width: 678px) {
+  .wrapper-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "head" "creators" "btn"; }
+    .wrapper-grid .head {
+      grid-area: head; }
+      .wrapper-grid .head h5 {
+        margin-bottom: 4rem; }
+    .wrapper-grid .btn {
+      grid-area: btn;
+      margin: 4rem 0 0 0;
+      width: 100%; }
+      .wrapper-grid .btn .button {
+        display: flex;
+        justify-content: center; }
+    .wrapper-grid .all {
+      grid-area: creators; } }
 @media screen and (max-width: 588px) {
   h1 {
     font-size: 2.8rem; }
@@ -313,6 +398,11 @@ footer {
     .artist-info-section .wrapper .auction-deadline button {
       width: 100%; }
   .artist-info-section .wrapper .additional-info .nft-buttons {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+
+  .nfts-section .wrapper .nfts {
+    grid-template-columns: 1fr; }
+    .nfts-section .wrapper .nfts .nft-3 {
+      display: none; } }
 
 /*# sourceMappingURL=nft.css.map */
