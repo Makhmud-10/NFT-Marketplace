@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "Space Mono";
-  src: url('../fonts/Space_Mono/SpaceMono-Regular.ttf');
+  src: url("../fonts/Space_Mono/SpaceMono-Regular.ttf");
 }
 
 // Global styles
@@ -189,7 +189,7 @@ button {
   }
 
   .change {
-    color: #00AC4F;
+    color: #00ac4f;
   }
 }
 
@@ -418,7 +418,6 @@ footer {
   // Rankings section
   .rankings-section {
     .wrapper {
-
       .number {
         left: 10px;
       }
