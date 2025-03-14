@@ -96,7 +96,8 @@ a {
   .button:hover {
     background-color: transparent; }
   .button img {
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin-right: 1rem; }
 
 .email-form {
   display: flex;
@@ -136,7 +137,7 @@ button {
     font-weight: 300; }
 
 .line {
-  border-top: 1px solid #3b3b3b;
+  border-top: 2px solid #3b3b3b;
   width: 100%;
   position: relative;
   bottom: 70px; }
@@ -199,29 +200,29 @@ main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       align-items: center; }
-      .artist-info-section .wrapper .frames .frame {
+      .artist-info-section .wrapper .frames .frame a {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0;
         color: #858584; }
-        .artist-info-section .wrapper .frames .frame h4 {
-          color: #858584;
-          font-weight: 600;
-          padding: 1.5rem 0; }
-        .artist-info-section .wrapper .frames .frame .number {
-          background-color: #3b3b3b;
-          border-radius: 20px;
-          padding: 5px 10px;
-          font-family: "Space Mono";
-          font-weight: 400;
-          font-size: 1.6rem;
-          margin-left: 2.6rem;
-          color: #fff; }
-        .artist-info-section .wrapper .frames .frame .checked-number {
-          background-color: #858584; }
-        .artist-info-section .wrapper .frames .frame .checked {
-          color: #fff; }
+      .artist-info-section .wrapper .frames .frame h4 {
+        color: #858584;
+        font-weight: 600;
+        padding: 1.5rem 0; }
+      .artist-info-section .wrapper .frames .frame .number {
+        background-color: #3b3b3b;
+        border-radius: 20px;
+        padding: 5px 10px;
+        font-family: "Space Mono";
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin-left: 2.6rem;
+        color: #fff; }
+      .artist-info-section .wrapper .frames .frame .checked-number {
+        background-color: #858584; }
+      .artist-info-section .wrapper .frames .frame .checked {
+        color: #fff; }
       .artist-info-section .wrapper .frames .checked-frame {
         border-bottom: 3px solid #858584; }
 
@@ -354,7 +355,10 @@ footer {
     .artist-info-section .wrapper .statistics .statistic {
       margin: 0; }
   .artist-info-section .wrapper .frames .frame .number {
-    font-size: 1.2rem; } }
+    font-size: 1.2rem; }
+
+  .nft-cards-section .wrapper .nft-card a h4 {
+    font-size: 2.2rem; } }
 @media screen and (max-width: 588px) {
   .email-form {
     flex-direction: column; }

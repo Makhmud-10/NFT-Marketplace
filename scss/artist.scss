@@ -296,11 +296,13 @@ main {
       align-items: center;
 
       .frame {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        color: #858584;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          color: #858584;
+        }
 
         h4 {
           color: #858584;
@@ -592,6 +594,19 @@ footer {
         .frame {
           .number {
             font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // NFT cards section
+  .nft-cards-section {
+    .wrapper {
+      .nft-card {
+        a {
+          h4 {
+            font-size: 2.2rem;
           }
         }
       }

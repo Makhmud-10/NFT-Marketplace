@@ -220,7 +220,7 @@ header {
 
 // Hero section
 main {
-  padding-top: 8rem ;
+  padding-top: 8rem;
 
   .wrapper {
     .search {
@@ -254,11 +254,13 @@ main {
       margin-top: 8rem;
 
       .frame {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        color: #858584;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          color: #858584;
+        }
 
         h4 {
           color: #858584;
@@ -421,6 +423,15 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+  // Global styles
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
+  }
+
   // Header section
   header {
     .header-wrapper {
@@ -447,16 +458,16 @@ footer {
     }
   }
 
-    // NFT cards section
-    .nft-cards-section {
-      .wrapper {
-        grid-template-columns: repeat(2, 1fr);
+  // NFT cards section
+  .nft-cards-section {
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr);
 
-        .nft-card-9 {
-          display: none;
-        }
+      .nft-card-9 {
+        display: none;
       }
     }
+  }
 
   // Footer section
   footer {
@@ -501,6 +512,10 @@ footer {
 
 @media screen and (max-width: 588px) {
   // Global styles
+  h1 {
+    font-size: 2.8rem;
+  }
+
   .email-form {
     flex-direction: column;
 
@@ -547,22 +562,22 @@ footer {
     }
   }
 
-    // NFT cards section
-    .nft-cards-section {
-      .wrapper {
-        grid-template-columns: 1fr;
+  // NFT cards section
+  .nft-cards-section {
+    .wrapper {
+      grid-template-columns: 1fr;
 
-        .nft-card-6 {
-          display: none;
-        }
+      .nft-card-6 {
+        display: none;
+      }
 
-        .nft-card {
-          .nft-info {
-            h6 {
-              font-size: 1.2rem;
-            }
+      .nft-card {
+        .nft-info {
+          h6 {
+            font-size: 1.2rem;
           }
         }
       }
     }
+  }
 }

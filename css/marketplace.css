@@ -178,29 +178,29 @@ main {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     margin-top: 8rem; }
-    main .wrapper .frames .frame {
+    main .wrapper .frames .frame a {
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 0;
       color: #858584; }
-      main .wrapper .frames .frame h4 {
-        color: #858584;
-        font-weight: 600;
-        padding: 1.5rem 0; }
-      main .wrapper .frames .frame .number {
-        background-color: #3b3b3b;
-        border-radius: 20px;
-        padding: 5px 10px;
-        font-family: "Space Mono";
-        font-weight: 400;
-        font-size: 1.6rem;
-        margin-left: 2.6rem;
-        color: #fff; }
-      main .wrapper .frames .frame .checked-number {
-        background-color: #858584; }
-      main .wrapper .frames .frame .checked {
-        color: #fff; }
+    main .wrapper .frames .frame h4 {
+      color: #858584;
+      font-weight: 600;
+      padding: 1.5rem 0; }
+    main .wrapper .frames .frame .number {
+      background-color: #3b3b3b;
+      border-radius: 20px;
+      padding: 5px 10px;
+      font-family: "Space Mono";
+      font-weight: 400;
+      font-size: 1.6rem;
+      margin-left: 2.6rem;
+      color: #fff; }
+    main .wrapper .frames .frame .checked-number {
+      background-color: #858584; }
+    main .wrapper .frames .frame .checked {
+      color: #fff; }
     main .wrapper .frames .checked-frame {
       border-bottom: 3px solid #858584; }
 
@@ -273,6 +273,12 @@ footer {
   header .header-wrapper {
     width: 90%; } }
 @media screen and (max-width: 992px) {
+  h1 {
+    font-size: 3.8rem; }
+
+  h5 {
+    font-size: 1.6rem; }
+
   header .header-wrapper {
     flex-direction: column;
     padding: 2rem; }
@@ -304,6 +310,9 @@ footer {
   main .wrapper .frames .frame h4 {
     font-size: 1.6rem; } }
 @media screen and (max-width: 588px) {
+  h1 {
+    font-size: 2.8rem; }
+
   .email-form {
     flex-direction: column; }
     .email-form input {
