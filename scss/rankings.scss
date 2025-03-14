@@ -17,6 +17,11 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: "Space Mono";
+  src: url('../fonts/Space_Mono/SpaceMono-Regular.ttf');
+}
+
 // Global styles
 * {
   margin: 0;
@@ -56,10 +61,26 @@ button {
   color: #fff;
 }
 
+h1 {
+  font-size: 5.1rem;
+  font-weight: 600;
+}
+
 h2 {
   font-size: 2.2rem;
   font-family: "Space Mono";
   font-weight: 700;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+h5 {
+  font-size: 2.2rem;
+  font-weight: 400;
 }
 
 p {
@@ -136,6 +157,42 @@ button {
   }
 }
 
+.ranking {
+  display: grid;
+  grid-template-columns: 45rem repeat(3, 1fr);
+  align-items: center;
+  font-family: "Space Mono";
+  font-weight: 400;
+  background-color: #3b3b3b;
+  padding: 1.2rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .artist {
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+
+    img {
+      width: 60px;
+      border-radius: 50%;
+      margin-right: 2rem;
+    }
+
+    h4 {
+      font-family: "Work Sans";
+    }
+  }
+
+  .change {
+    color: #00AC4F;
+  }
+}
+
 // Header section
 header {
   .header-wrapper {
@@ -161,6 +218,88 @@ header {
             padding: 1.8rem 2.8rem;
           }
         }
+      }
+    }
+  }
+}
+
+// Hero section
+main {
+  padding: 8rem 0;
+
+  .wrapper {
+    h5 {
+      margin-bottom: 8rem;
+      margin-top: 2rem;
+    }
+
+    .frames {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+
+      .frame {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          color: #858584;
+        }
+
+        h4 {
+          color: #858584;
+          font-weight: 600;
+          padding: 1.5rem 0;
+        }
+
+        .checked {
+          color: #fff;
+        }
+      }
+
+      .checked-frame {
+        border-bottom: 3px solid #858584;
+      }
+    }
+  }
+}
+
+// Rankings section
+.rankings-section {
+  padding-bottom: 8rem;
+
+  .wrapper {
+    .number {
+      padding: 4px 10px;
+      border-radius: 20px;
+      background-color: #2b2b2b;
+      margin-right: 2rem;
+      display: inline-block;
+      position: relative;
+      top: 58px;
+      left: 2rem;
+      color: #858584;
+      font-family: "Space Mono";
+    }
+
+    .number-table {
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-right: 2rem;
+      display: inline-block;
+      position: relative;
+      top: 39px;
+      left: 2rem;
+      color: #858584;
+    }
+
+    .table-header {
+      background-color: #2b2b2b;
+      border: 1px solid #3b3b3b;
+
+      p {
+        color: #858584;
       }
     }
   }
@@ -240,6 +379,11 @@ footer {
 }
 
 @media screen and (max-width: 992px) {
+  // Global styles
+  .sold {
+    display: none;
+  }
+
   // Header section
   header {
     .header-wrapper {
@@ -266,6 +410,33 @@ footer {
     }
   }
 
+  // Hero section
+  main {
+    padding: 4rem 0;
+  }
+
+  // Rankings section
+  .rankings-section {
+    .wrapper {
+
+      .number {
+        left: 10px;
+      }
+
+      .ranking {
+        grid-template-columns: 40rem repeat(2, 1fr);
+
+        .artist {
+          margin-left: 4rem;
+
+          img {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+
   // Footer section
   footer {
     .wrapper {
@@ -282,16 +453,61 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  // Global styles
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
+  }
+
+  .change {
+    display: none;
+  }
+
   // Header section
   header {
     .header-wrapper {
       width: 98%;
     }
   }
+
+  // Hero section
+  main {
+    .wrapper {
+      .frames {
+        .frame {
+          a {
+            h4 {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Rankings section
+  .rankings-section {
+    .wrapper {
+      .ranking {
+        grid-template-columns: 3fr 1fr;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 588px) {
   // Global styles
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h4 {
+    font-size: 1.6rem;
+  }
+
   .email-form {
     flex-direction: column;
 
@@ -315,6 +531,46 @@ footer {
 
           li {
             margin-top: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Hero section
+  main {
+    padding: 3rem 0;
+  }
+
+  // Rankings section
+  .rankings-section {
+    .wrapper {
+      p {
+        font-size: 1.2rem;
+      }
+
+      .number {
+        top: 38px;
+        background-color: transparent;
+      }
+
+      .number-table {
+        top: 34px;
+        left: 10px;
+      }
+
+      .ranking {
+        margin-bottom: 0;
+
+        .artist {
+          margin-left: 3rem;
+
+          img {
+            width: 24px;
+          }
+
+          h4 {
+            font-weight: 400;
           }
         }
       }
